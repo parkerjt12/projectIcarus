@@ -19,7 +19,7 @@ public class LoginServlet extends HttpServlet {
 		
 		RequestDispatcher rd;
 		
-		rd = req.getRequestDispatcher("welcome.jsp");
+		rd = req.getRequestDispatcher("welcome.jsp");		
 		rd.forward(req, resp);
 		
 	}
@@ -28,8 +28,17 @@ public class LoginServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		RequestDispatcher rd;
+		rd = req.getRequestDispatcher("index.jsp");
+		String username = req.getParameter("username");
+		String password = req.getParameter("password");
+		if(username != null && username.contains("billy"))
+		{
+			if(password != null && password.contains("fucknugget"))
+			{
+				rd = req.getRequestDispatcher("welcome.jsp");
+			}
+		}
 		
-		rd = req.getRequestDispatcher("welcome.jsp");
 		rd.forward(req, resp);
 	}
 
