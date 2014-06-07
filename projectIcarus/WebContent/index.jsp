@@ -2,11 +2,14 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Welcome</title>
 </head>
 <body>
-<p>test</p>
-
-
+<p>Login</p>
+<form action = "loginServlet">
+<input name = "username"> </input>
+<input name = "password"> </input>
+<button type = "Submit" name = "Submit" value = "login">Login</button>
+</form>
 </body>
 </html>
