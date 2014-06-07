@@ -6,9 +6,9 @@
 </head>
 <body>
 <p>Login</p>
-<form action = "loginServlet">
-<input name = "username"> </input>
-<input name = "password"> </input>
+<form action = "loginServlet" method="post">
+<input type="text" name = "username"> </input>
+<input type="pasword" name = "password"> </input>
 <button type = "Submit" name = "Submit" value = "login">Login</button>
 </form>
 </body>
